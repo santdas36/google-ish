@@ -10,12 +10,11 @@ import {
   SunIcon,
   MoonIcon,
   UserCircleIcon,
-  SearchIcon
+  SearchIcon,
 } from "@heroicons/react/outline";
 import { SparklesIcon } from "@heroicons/react/solid";
 
 export default function Home() {
-
   const router = useRouter();
   const toggleSwitch = useRef(null);
   const appDiv = useRef(null);
@@ -24,36 +23,39 @@ export default function Home() {
   const searchBox = useRef(null);
 
   const toggleTheme = (e) => {
-e.preventDefault();
-appDiv.current.classList.toggle('dark');
-toggleSwitch.current.classList.toggle('dark');
-}
+    e.preventDefault();
+    appDiv.current.classList.toggle("dark");
+    toggleSwitch.current.classList.toggle("dark");
+  };
   const openSidebar = (e) => {
-e.preventDefault();
-sidebarRef.current.classList.add('open');
-}
+    e.preventDefault();
+    sidebarRef.current.classList.add("open");
+  };
 
   const search = (e) => {
-e.preventDefault();
-const query = searchInput.current.value;
-if (!query) {
-searchInput.current.focus();
-} else {
-router.push(`/search?q=${query}`);
-}
-}
+    e.preventDefault();
+    const query = searchInput.current.value;
+    if (!query) {
+      searchInput.current.focus();
+    } else {
+      router.push(`/search?q=${query}`);
+    }
+  };
 
   return (
     <div className="app" ref={appDiv}>
       <Head>
         <title>Google-ish</title>
-        <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/2/2d/Google-favicon-2015.png" />
+        <link
+          rel="icon"
+          href="https://upload.wikimedia.org/wikipedia/commons/2/2d/Google-favicon-2015.png"
+        />
       </Head>
 
       <header>
-        <Sidebar ref={sidebarRef}/>
+        <Sidebar ref={sidebarRef} />
         <span>
-          <button className="sidebarToggle icon" onClick={openSidebar} >
+          <button className="sidebarToggle icon" onClick={openSidebar}>
             <MenuAlt1Icon />
           </button>
           <ul className="nav">
@@ -64,7 +66,11 @@ router.push(`/search?q=${query}`);
           </ul>
         </span>
         <span>
-          <div className="themeToggle icon" ref={toggleSwitch} onClick={toggleTheme}>
+          <div
+            className="themeToggle icon"
+            ref={toggleSwitch}
+            onClick={toggleTheme}
+          >
             <SunIcon className="sun" />
             <MoonIcon className="moon" />
           </div>
@@ -86,7 +92,13 @@ router.push(`/search?q=${query}`);
         <div className="searchContainer">
           <form onSubmit={search} className="search" ref={searchBox}>
             <SearchIcon className="searchIcon" />
-            <input type="text" placeholder="Type your query..." ref={searchInput} onFocus={()=> searchBox.current.classList.add('focus')} onBlur={()=> searchBox.current.classList.remove('focus')}/>
+            <input
+              type="text"
+              placeholder="Type your query..."
+              ref={searchInput}
+              onFocus={() => searchBox.current.classList.add("focus")}
+              onBlur={() => searchBox.current.classList.remove("focus")}
+            />
             <button type="submit">
               <span>Search</span>
               <SearchIcon className="searchIcon" />
@@ -98,7 +110,7 @@ router.push(`/search?q=${query}`);
           </button>
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
