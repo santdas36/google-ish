@@ -1,4 +1,5 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import { useRef, useState, useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import Apps from "../components/Apps";
@@ -9,8 +10,6 @@ import TextTruncate from "react-text-truncate";
 
 import {
   MenuAlt1Icon,
-  SunIcon,
-  MoonIcon,
   UserCircleIcon,
   SearchIcon,
   DocumentSearchIcon,
@@ -24,25 +23,20 @@ import {
 } from "@heroicons/react/outline";
 import { SparklesIcon } from "@heroicons/react/solid";
 
+const ThemeToggle = dynamic(() => import("../components/ThemeToggle"), {
+  ssr: false,
+});
+
 export default function Search({ results }) {
   const router = useRouter();
-  const toggleSwitch = useRef(null);
-  const appDiv = useRef(null);
   const sidebarRef = useRef(null);
   const searchInput = useRef(null);
   const searchBox = useRef(null);
-  const resultsDiv = useRef(null);
   const headerRef = useRef(null);
   const [userInp, setUserInp] = useState(router.query.q);
 
   const queryStartIndex = Number(router.query.s) || 0;
 
-  const toggleTheme = (e) => {
-    e.preventDefault();
-    appDiv.current.classList.toggle("dark");
-    resultsDiv.current.classList.toggle(styles.dark);
-    toggleSwitch.current.classList.toggle("dark");
-  };
   const openSidebar = (e) => {
     e.preventDefault();
     sidebarRef.current.classList.add("open");
@@ -78,7 +72,7 @@ export default function Search({ results }) {
   }, []);
 
   return (
-    <div className="app" ref={appDiv}>
+    <div className="app">
       <Head>
         <title>{router.query.q} - Google Search</title>
         <link
@@ -110,14 +104,7 @@ export default function Search({ results }) {
           </form>
         </span>
         <span>
-          <div
-            className="themeToggle icon"
-            ref={toggleSwitch}
-            onClick={toggleTheme}
-          >
-            <SunIcon className="sun" />
-            <MoonIcon className="moon" />
-          </div>
+          <ThemeToggle />
           <Apps />
           <div className="user">
             <UserCircleIcon />
@@ -166,7 +153,7 @@ export default function Search({ results }) {
           {results?.searchInformation?.searchTime} seconds
         </span>
 
-        <ul className={styles.results} ref={resultsDiv}>
+        <ul className={`results ${styles.results}`}>
           {results?.items?.map((result) => (
             <li key={result.link}>
               <a href={result.link}>

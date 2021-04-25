@@ -43,7 +43,7 @@
   background: var(--gr2);
   margin: 1rem 0;
 }
-.app.dark .sidebar hr {
+body.dark .sidebar hr {
   background: var(--gr4);
 }
 .sidebar ul li {
@@ -58,7 +58,7 @@
   width: 100%;
   padding-right: 1rem;
 }
-.app.dark .sidebar ul li {
+body.dark .sidebar ul li {
   color: var(--bk2);
 }
 .sidebar ul li:not(.ilogo):hover {

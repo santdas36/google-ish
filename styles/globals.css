@@ -19,7 +19,7 @@
   --white: #fff;
   --maxWidth: 720px;
 }
-.app.dark {
+body.dark {
   --b1: #3fc5fa;
   --b2: #4f86db;
   --b3: #215fbb;
@@ -73,11 +73,11 @@ svg {
   background: var(--gr2);
   border-radius: 0.5rem;
 }
-.app.dark .suggestion ul::-webkit-scrollbar-thumb {
+body.dark .suggestion ul::-webkit-scrollbar-thumb {
   border: solid 0.3rem var(--gr4);
   background: var(--white);
 }
-.app.dark ::-webkit-scrollbar-thumb {
+body.dark ::-webkit-scrollbar-thumb {
   background: var(--gr4);
 }
 ::-webkit-scrollbar-button {
@@ -98,4 +98,14 @@ a {
 }
 a:hover {
   color: var(--b3);
+}
+
+body.dark .results li a {
+  box-shadow: 0 0.25rem 1rem -0.25rem rgba(0, 0, 0, 0.25);
+}
+body.dark .results li a:hover {
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+body.dark .results a:hover .title {
+  color: var(--b1);
 }

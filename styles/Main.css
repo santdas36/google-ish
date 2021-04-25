@@ -24,10 +24,10 @@ img.shadow {
   opacity: 0.25;
   z-index: -1;
 }
-.app.dark .logo img {
+body.dark .logo img {
   filter: brightness(95%);
 }
-.app.dark img.shadow {
+body.dark img.shadow {
   filter: blur(0.5rem) brightness(50%);
 }
 .searchContainer {
@@ -83,10 +83,10 @@ img.shadow {
   box-shadow: 0 0 0 0.15rem rgba(0, 0, 0, 0.1),
     0 0.75rem 1.5rem rgba(0, 0, 0, 0.05);
 }
-.app.dark .search:hover {
+body.dark .search:hover {
   box-shadow: 0 0.75rem 1rem rgba(0, 0, 0, 0.15);
 }
-.app.dark .search.focus {
+body.dark .search.focus {
   box-shadow: 0 0 0 0.15rem rgba(135, 105, 185, 0.5),
     0 0.75rem 1.5rem rgba(0, 0, 0, 0.05);
 }
@@ -113,7 +113,7 @@ button:focus {
 .search button svg {
   display: none;
 }
-.app.dark .search button {
+body.dark .search button {
   color: white;
 }
 .search > svg {
@@ -131,10 +131,10 @@ button:focus {
   box-shadow: 0 0 0 0.15rem rgba(62, 202, 255, 0.5),
     0 0.25rem 0.75rem rgba(62, 202, 255, 0.5);
 }
-.app.dark .search button:hover {
+body.dark .search button:hover {
   box-shadow: 0 0.75rem 1rem rgba(62, 202, 255, 0.15);
 }
-.app.dark .search button:focus {
+body.dark .search button:focus {
   box-shadow: 0 0 0 0.15rem rgba(62, 202, 255, 0.5),
     0 0.25rem 0.75rem rgba(62, 202, 255, 0.25);
 }

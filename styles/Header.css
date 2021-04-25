@@ -146,17 +146,17 @@ button.icon {
 .user .top {
   color: var(--bk3);
 }
-.app.dark .user .top {
+body.dark .user .top {
   color: var(--bk2);
 }
 .user:hover {
   background: linear-gradient(to right bottom, var(--bk3), var(--bk1));
 }
-.app.dark .user:hover {
+body.dark .user:hover {
   background: var(--bk1);
 }
 .user:hover .top,
-.app.dark .user:hover .top {
+body.dark .user:hover .top {
   color: var(--white);
 }
 .user svg {

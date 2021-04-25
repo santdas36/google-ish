@@ -41,7 +41,7 @@
   opacity: 0;
   pointer-events: none;
 }
-.app.dark .apps__list {
+body.dark .apps__list {
   color: var(--bk2);
 }
 .apps.open .apps__list,
@@ -72,7 +72,7 @@
   background: var(--gr2);
   box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.05);
 }
-.app.dark .apps__list a:hover img {
+body.dark .apps__list a:hover img {
   background: var(--gr3);
 }
 

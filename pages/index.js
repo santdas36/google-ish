@@ -4,29 +4,25 @@ import Sidebar from "../components/Sidebar";
 import Apps from "../components/Apps";
 import Footer from "../components/Footer";
 import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
 
 import {
   MenuAlt1Icon,
-  SunIcon,
-  MoonIcon,
   UserCircleIcon,
   SearchIcon,
 } from "@heroicons/react/outline";
 import { SparklesIcon } from "@heroicons/react/solid";
 
+const ThemeToggle = dynamic(() => import("../components/ThemeToggle"), {
+  ssr: false,
+});
+
 export default function Home() {
   const router = useRouter();
-  const toggleSwitch = useRef(null);
-  const appDiv = useRef(null);
   const sidebarRef = useRef(null);
   const searchInput = useRef(null);
   const searchBox = useRef(null);
 
-  const toggleTheme = (e) => {
-    e.preventDefault();
-    appDiv.current.classList.toggle("dark");
-    toggleSwitch.current.classList.toggle("dark");
-  };
   const openSidebar = (e) => {
     e.preventDefault();
     sidebarRef.current.classList.add("open");
@@ -43,7 +39,7 @@ export default function Home() {
   };
 
   return (
-    <div className="app" ref={appDiv}>
+    <div className="app">
       <Head>
         <title>Google-ish</title>
         <link
@@ -66,14 +62,7 @@ export default function Home() {
           </ul>
         </span>
         <span>
-          <div
-            className="themeToggle icon"
-            ref={toggleSwitch}
-            onClick={toggleTheme}
-          >
-            <SunIcon className="sun" />
-            <MoonIcon className="moon" />
-          </div>
+          <ThemeToggle />
           <Apps />
           <div className="user">
             <UserCircleIcon />
