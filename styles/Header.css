@@ -114,7 +114,7 @@ button.icon {
 .themeToggle svg {
   position: absolute;
 }
-.themeToggle.dark .moon {
+body.dark .moon {
   transform: translateY(1.33rem);
   opacity: 0;
   transition: all 0.2s -0.1s ease-in-out;
@@ -129,7 +129,7 @@ button.icon {
   transform: translateY(-1.33rem);
   transition: all 0.2s -0.1s ease-in-out;
 }
-.themeToggle.dark .sun {
+body.dark .sun {
   opacity: 1;
   transform: translateY(0);
   transition: all 0.2s 0.2s ease-in-out;
