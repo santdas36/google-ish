@@ -1,4 +1,4 @@
-import { useEffect, useEffect } from "react";
+import { useEffect } from "react";
 import { SunIcon, MoonIcon } from "@heroicons/react/outline";
 
 const ThemeToggle = () => {
