@@ -99,13 +99,6 @@ a {
 a:hover {
   color: var(--b3);
 }
-
-body.dark .results li a {
-  box-shadow: 0 0.25rem 1rem -0.25rem rgba(0, 0, 0, 0.25) !important;
-}
-body.dark .results li a:hover {
-  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25) !important;
-}
-body.dark .results a:hover .title {
-  color: var(--b1) !important;
+body.dark a:hover {
+  color: var(--b1);
 }
