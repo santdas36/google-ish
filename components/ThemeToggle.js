@@ -24,6 +24,6 @@ const ThemeToggle = () => {
         <MoonIcon className="moon" />
     </div>
   );
-});
+};
 
 export default ThemeToggle;
