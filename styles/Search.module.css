@@ -5,6 +5,7 @@
 }
 .searchMain {
   padding: 0 1.5rem;
+  padding-left: 4rem;
   margin-top: 0;
   justify-content: flex-start;
 }
@@ -137,6 +138,9 @@
 }
 
 @media (max-width: 550px) {
+  .searchMain {
+    padding: 0 1.5rem;
+  }
   .options li + li {
     margin-left: 1rem;
   }
