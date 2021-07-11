@@ -79,11 +79,11 @@ export default function Home() {
           <img className="shadow" src="/google.png" />
         </div>
         <div className="searchContainer">
-          <form onSubmit={search} className="search" ref={searchBox}>
+          <form onSubmit={search} className="Rechercher" ref={searchBox}>
             <SearchIcon className="searchIcon" />
             <input
               type="text"
-              placeholder="Type your query..."
+              placeholder="Tapez votre recherche..."
               ref={searchInput}
               onFocus={() => searchBox.current.classList.add("focus")}
               onBlur={() => searchBox.current.classList.remove("focus")}
