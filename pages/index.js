@@ -56,9 +56,9 @@ export default function Home() {
           </button>
           <ul className="nav">
             <li>Images</li>
-            <li>Videos</li>
-            <li>News</li>
-            <li>Explore</li>
+            <li>Vidéos</li>
+            <li>Actualités</li>
+            <li>Explorer</li>
           </ul>
         </span>
         <span>
@@ -67,7 +67,7 @@ export default function Home() {
           <div className="user">
             <UserCircleIcon />
             <span className="uid">
-              <span className="top">My Account</span>
+              <span className="top">Mon compte</span>
             </span>
           </div>
         </span>
