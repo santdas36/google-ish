@@ -40,7 +40,7 @@ const Sidebar = forwardRef((props, ref) => {
       <ul ref={sidebarList}>
         <li className="ilogo">
           <img src="/google.png" />
-          <button className="icon closeSidebar" onClick={closeSidebar}>
+          <button className="icon closeSidebar hover" onClick={closeSidebar}>
             <XIcon />
           </button>
         </li>

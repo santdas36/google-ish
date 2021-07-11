@@ -81,3 +81,17 @@ body.dark .sidebar ul li {
   margin: 0 !important;
   width: 1.33rem !important;
 }
+
+.hover{
+  cursor: pointer;
+}
+
+/* Mes styles ajoutées */
+
+a {
+  cursor:pointer;
+}
+
+.sidebar > ul > li {
+  cursor:pointer;
+}
