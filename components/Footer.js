@@ -4,15 +4,15 @@ const Footer = () => {
   return (
     <footer>
       <span>
-        <LocationMarkerIcon /> India | English <a href="#">官话</a>
-        <a href="#">español</a>
-        <a href="#">عربى</a>
-        <a href="#">More...</a>
+        <LocationMarkerIcon /> Anglais | Lingala <a href="#">Tshiluba</a>
+        <a href="#">KiKongo</a>
+        <a href="#">Swahili</a>
+        <a href="#">Plus...</a>
       </span>
       <span className="fright">
-        <a href="#">Privacy</a>
+        <a href="#">Politique</a>
         <a href="#">T&C</a>
-        <a href="#">About</a>
+        <a href="#">A-propôs</a>
       </span>
     </footer>
   );

@@ -79,7 +79,7 @@ export default function Home() {
           <img className="shadow" src="/google.png" />
         </div>
         <div className="searchContainer">
-          <form onSubmit={search} className="Rechercher" ref={searchBox}>
+          <form onSubmit={search} className="search" ref={searchBox}>
             <SearchIcon className="searchIcon" />
             <input
               type="text"
@@ -89,13 +89,13 @@ export default function Home() {
               onBlur={() => searchBox.current.classList.remove("focus")}
             />
             <button type="submit">
-              <span>Search</span>
+              <span>Chercher</span>
               <SearchIcon className="searchIcon" />
             </button>
           </form>
           <button className="lucky">
             <SparklesIcon />
-            Feeling Lucky?
+            Je suis chanceux ?
           </button>
         </div>
       </main>
