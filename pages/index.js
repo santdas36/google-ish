@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <div className="app">
       <Head>
-        <title>Google-ish</title>
+        <title>Google-Search</title>
         <link
           rel="icon"
           href="https://upload.wikimedia.org/wikipedia/commons/2/2d/Google-favicon-2015.png"
